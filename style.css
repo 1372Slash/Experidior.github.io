@@ -1,0 +1,70 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;  
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    
+    
+  }
+.grd{
+    background-image: url(grid.jpg);
+   
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size:auto;
+}
+
+.bckg {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30%;
+  padding-bottom: 15%;
+    
+}
+h1{
+    font-size: 4em;
+    color:white;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 0px 4px 0px rgba(0,0,0,1);
+    margin-bottom: 10px;
+}
+p {
+      font-weight: 500;
+      font-size: 15px;
+      
+}
+.bckg2{
+    font-family: 'Montserrat', sans-serif;
+    width: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+    box-shadow: 0px 4px 0px rgba(0,0,0,1);
+    transition-duration: 0.2s;
+    
+}
+.bckg2:hover{
+    transform: translateY(4px);
+    transition-duration: 0.2s;
+}
+.bckg2:active{
+    transform:scale(95%);
+    transition-duration: 0.2s;
+}
