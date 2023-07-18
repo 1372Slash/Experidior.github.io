@@ -3,6 +3,8 @@ function login(){
     if (password == "Sandi") {
         window.location.href = 'resultR.html';
     } else {
-        alert("Kata Sandi Salah!");
+        alert("Bercanda"); {
+        window.location.href = 'resultR.html';
+        }
     }
 }

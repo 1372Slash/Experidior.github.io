@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz@20" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experidior</title>
+    <script src="lp_plygrn.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="grd">
+    <div class="bckg" style="margin-top: 30vh;">
+        <h1 style="color: var(--loop);"">Playground</h1>
+        <div class="bckg2">
+            <h2 style="color: var(--loop);">Petunjuk</h2>
+        <p>Coba untuk mengubah nilai a,b, dan c menggunakan nomor. Dan Lihat hasilnya</p>
+    </div>
+    &nbsp;
+    <div class="bckg2" style="border: 1px solid  var(--loop);
+    box-shadow: 0px 4px 0px  var(--loop); color:  var(--loop);">
+        <p><i class="material-symbols-outlined">output</i>&nbsp;&nbsp;Output</p>
+        <p id="hasil"></p>
+    </div>
+    &nbsp;
+    <div class="bckg2" style="border: 1px solid  var(--loop);
+    box-shadow: 0px 4px 0px  var(--loop); color:  var(--loop);">
+        <p><i class="material-symbols-outlined">page_info</i>&nbsp;&nbsp;Setting</p>
+        <form>
+            <label for="nA">Nilai A:</label><br>
+            <input  class="sex" type="text" id="nA" name="nA"><br><br>
+            <label for="nB">Nilai B:</label><br>
+            <input  class="sex" type="text" id="nB" name="nB"><br><br>
+            <label for="nC">Nilai C:</label><br>
+            <input  class="sex" type="text" id="nC" name="nC">
+          </form> 
+          &nbsp;
+    </div>
+    &nbsp;
+    <div class="bckg2" onclick="save()" style="border: 1px solid  var(--loop);
+    box-shadow: 0px 4px 0px  var(--loop); color:  var(--loop);">
+        <p><i class="material-symbols-outlined">Check</i>&nbsp;&nbsp;Enter</p>
+    </div>
+    &nbsp;
+    <div class="bckg2" onclick="goBack()" style="border: 1px solid  var(--loop);
+    box-shadow: 0px 4px 0px  var(--loop); color:  var(--loop);">
+        <p><i class="material-symbols-outlined">arrow_back</i>&nbsp;&nbsp;Kembali</p>
+    </div>
+    </div>
+    </div>
+    <script>
+        function save(){
+    var x = document.getElementById("nA").value;
+    var y = document.getElementById("nB").value;
+    var z= document.getElementById("nC").value;
+    for (var i=x; i<y; i+=z){
+        document.getElementById("hasil").innerHTML = i;
+    // document.getElementById("hasil").innerHTML = x+y+z;   
+    }
+        }
+</script>
+</body>
+</html>
