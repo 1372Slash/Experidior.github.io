@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz@20" rel="stylesheet" />
@@ -9,8 +10,21 @@
     <title>Experidior</title>
     <script src="lp_plygrn.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        // Menggunakan Javascript
+        window.addEventListener('DOMContentLoaded', () => {
+          const navContainer = document.querySelector('#nav-container');
+          fetch('nav.html')
+            .then(response => response.text())
+            .then(html => {
+              navContainer.innerHTML = html;
+            });
+        });
+      </script>
 </head>
 <body>
+    <div id="nav-container">
+    </div>
     <div class="grd">
     <div class="bckg" style="margin-top: 30vh;">
         <h1 style="color: var(--loop);"">Playground</h1>

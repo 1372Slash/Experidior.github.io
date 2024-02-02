@@ -15,8 +15,10 @@ html, body {
     
   }
 .grd{
+    /* background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.075)); url(grid.jpg);  */
     background-image: url(grid.jpg);
-   
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background-attachment: fixed;
     background-repeat: repeat;
@@ -81,28 +83,45 @@ p {
 
 }
 /* Navbar Component */
-a {
-    color: white;
+    .nav-contain{
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.664);
+    }
+    .brand {
+    top: 0; height: 9vh; width: 100%;
+    position: fixed;
+    padding-left: 5vh;
+    z-index: 1000000001;
+    display: inline-flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    text-align: center;
+    transform-style: none;
+    text-decoration-style: none;
+    }
+    .nohover {
+        pointer-events: none;
+    }
+    a {
+    color: rgb(0, 0, 0);
     text-decoration: none;
     text-align: center;
-    
-}
-a:hover {
+    }
+    a:hover {
     color: black;
     transform: translateY(4px);
     transition-duration: 0.2s;
     background-color: var(--basic);
-    
-
-}
-a:active{
+    }
+    a:active{
     transform:scale(95%);
     transition-duration: 0.2s;
     filter: brightness(85%);
-}
-.Navbar{
-   
-    top: 0; height: 10vh; width: 100%;
+    }
+    .Navbar{
+    top: 0; height: 9vh; width: 100%;
     position: fixed;
     padding-right: 10vh;
     z-index: 1000000000;
@@ -112,33 +131,47 @@ a:active{
     align-items: end;
     flex-wrap: wrap-reverse;
     /* background-color: rgb(255, 154, 154); */
-    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.514));
-    
-}
-.Navbar nav ul li {
+    /* background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.637)); */
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.664);
+    }
+    .navbar-brand{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: start;
+        text-align: center;
+    }
+    .navbar-name{
+        align-items: center;
+        justify-content: center;
+        align-self: start;
+        text-align: center;
+
+    }
+    .Navbar nav ul li {
     list-style: none;
     padding: 5px;
-    color: white;
-
-}
-.Navbar nav div ul {
+    color: #171717;
+    
+    }
+    .Navbar nav div ul {
     display: flex; 
     margin: 0;
-  /* padding: 0;
-  overflow: hidden;
-  background-color: #6743d6; */
-    
-}
-.Navbar nav {
+    padding-right: 2vh;
+    /* padding: 0;
+    overflow: hidden;
+    background-color: #6743d6; */
+    }
+    .Navbar nav {
     list-style-type: none;
-
-}
-/* .Navbar nav div {
+    }
+    /* .Navbar nav div {
     top: 0; height: 100vh; width: 100%;
 
         background-color: #6743d6;
 
-} */
+    } */
 .iframe-round {
     top: 0;
     left: 0;
@@ -167,16 +200,129 @@ a:active{
     transition-duration: 0.2s; 
     width:80%; height: 500px;
 }
-@media screen and (max-width: 600px) {
+/* ADAPTIVE SCREEN */
+    @media screen and (max-width: 400px) {
+    .bckg {
+        margin-top: 100%;
+    }
+    .rts{
+        width:100%; height: 300px;
+    }
+    }
+    @media screen and (max-width: 800px) {
     .bckg {
         margin-top: 90%;
     }
     .rts{
         width:90%; height: 300px;
     }
-  }
+    .navbar-name{
+        display: none;
+    }
+    }
 .sex {
   border: 1px solid var(--loop);
   border-radius: 50px;
   height: 4vh;
 }
+/* GRADIENT BLUR */
+    .gradient-blur {
+    position: fixed;
+    z-index: 5;
+    inset: auto 0 0 0;
+    height: 65%;
+    pointer-events: none;
+    }
+    .gradient-blur > div,
+    .gradient-blur::before,
+    .gradient-blur::after {
+    position: absolute;
+    inset: 0;
+    }
+    .gradient-blur::before {
+    content: "";
+    z-index: 1;
+    backdrop-filter: blur(0.5px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 12.5%,
+      rgba(0, 0, 0, 1) 25%,
+      rgba(0, 0, 0, 0) 37.5%
+    );
+    }
+    .gradient-blur > div:nth-of-type(1) {
+    z-index: 2;
+    backdrop-filter: blur(1px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 12.5%,
+      rgba(0, 0, 0, 1) 25%,
+      rgba(0, 0, 0, 1) 37.5%,
+      rgba(0, 0, 0, 0) 50%
+    );
+    }
+    .gradient-blur > div:nth-of-type(2) {
+    z-index: 3;
+    backdrop-filter: blur(2px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 1) 37.5%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 62.5%
+    );
+    }
+    .gradient-blur > div:nth-of-type(3) {
+    z-index: 4;
+    backdrop-filter: blur(4px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 37.5%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 1) 62.5%,
+      rgba(0, 0, 0, 0) 75%
+    );
+    }
+    .gradient-blur > div:nth-of-type(4) {
+    z-index: 5;
+    backdrop-filter: blur(8px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(0, 0, 0, 1) 62.5%,
+      rgba(0, 0, 0, 1) 75%,
+      rgba(0, 0, 0, 0) 87.5%
+    );
+    }
+    .gradient-blur > div:nth-of-type(5) {
+    z-index: 6;
+    backdrop-filter: blur(16px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 62.5%,
+      rgba(0, 0, 0, 1) 75%,
+      rgba(0, 0, 0, 1) 87.5%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    }
+    .gradient-blur > div:nth-of-type(6) {
+    z-index: 7;
+    backdrop-filter: blur(32px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(0, 0, 0, 1) 87.5%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    }
+    .gradient-blur::after {
+    content: "";
+    z-index: 8;
+    backdrop-filter: blur(64px);
+    mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 87.5%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    }

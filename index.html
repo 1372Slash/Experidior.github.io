@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz@20" rel="stylesheet" />
@@ -8,12 +9,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experidior</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        // Menggunakan Javascript
+        window.addEventListener('DOMContentLoaded', () => {
+          const navContainer = document.querySelector('#nav-container');
+          fetch('nav.html')
+            .then(response => response.text())
+            .then(html => {
+              navContainer.innerHTML = html;
+            });
+        });
+      </script>
 </head>
 <body>
-    <div class="Navbar">
+    <div id="nav-container">
+    </div>
+    <!-- NAV -->
+        <!-- <a class="brand nohover" href="result.html" rel="Hasil pembelajaran terakhir">
+            <div class="navbar-brand">
+                 <i class="fi fi-rr-galaxy-star"></i>
+                    &nbsp;&nbsp;<p class="navbar-name">Experidior</p>
+            </div>
+            </a>
+        <div class="Navbar">
         <nav>
             <div class="Navblock">
-            <ul>
+            <ul>            
                 <li>
                     <a href="result.html" rel="Hasil pembelajaran terakhir">
                     Hasil Pembelajaran 
@@ -25,24 +46,23 @@
                 <li>
                     <a href="credits.html" rel="Kredit">Kredit</a>
                 </li>
-    
             </ul>
             </div>
-    
         </nav>
-</div>
+        </div> -->
+    <!-- NAV -->
     <div class="grd">
     <div class="bckg" style="margin-top: 90vh;">
         <h1>Experidior</h1>
             <div class="bckg2">
             <h2 style="color:#F00192;">Apa Itu?</h2>
             <p>Experidior adalah distrik perkembangan, percobaan, dan penguasaian dalam hal koding. Experidior adalah gabungan dari kata latin Experimentum dan Progredior yang berarti Percobaan yang maju</p>
-            <p style="color:#F00192;"><i class="material-symbols-outlined">update</i>&nbsp;&nbsp; Diupdate pada 19/7/23</p>
+            <p style="color:#F00192;"><i class="material-symbols-outlined">update</i>&nbsp;&nbsp; Diupdate pada 02/02/24</p>
         </div>
     &nbsp;
         <div class="bckg2"  onclick="window.location.href='result.html'" style="border: 1px solid #F00192;
         box-shadow: 0px 4px 0px #F00192; color: #F00192;">
-        <p><i class="material-symbols-outlined">menu_book</i>&nbsp;&nbsp;Hasil Pembelajaran <h1>BARU</h1></p>
+        <p><i class="material-symbols-outlined">menu_book</i>&nbsp;&nbsp;Hasil Pembelajaran</p>
         </div>
     &nbsp;
         <div class="bckg2"  onclick="window.location.href='links.html'" style="border: 1px solid #F00192;
@@ -65,6 +85,8 @@
         <iframe class="iframe-round" width="100%" height="absolute" src="https://www.youtube.com/embed/videoseries?si=ME8o43xpQZ9ji1vj&amp;list=PLmJL5Rf_H6ZZYRcHfCt2EnCA4fpjZTlRs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
         </div>
     </div>
+        <!-- <div class="gradient-blur">
+        </div> -->
     </div>
 </body>
 </html>
