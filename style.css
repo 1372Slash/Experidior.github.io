@@ -1,5 +1,6 @@
 :root {
     --loop: #6743d6;
+    --basic : #F00192;
 }
 html, body {
     width: 100%;
@@ -81,15 +82,17 @@ p {
 }
 /* Navbar Component */
 a {
-    color: black;
+    color: white;
     text-decoration: none;
     text-align: center;
     
 }
 a:hover {
-    color:#6743d6;
-    transition: all;
+    color: black;
+    transform: translateY(4px);
     transition-duration: 0.2s;
+    background-color: var(--basic);
+    
 
 }
 a:active{
@@ -109,12 +112,13 @@ a:active{
     align-items: end;
     flex-wrap: wrap-reverse;
     /* background-color: rgb(255, 154, 154); */
-    background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(0, 0, 0));
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.514));
     
 }
 .Navbar nav ul li {
     list-style: none;
     padding: 5px;
+    color: white;
 
 }
 .Navbar nav div ul {
