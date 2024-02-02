@@ -21,7 +21,6 @@ html, body {
     background-repeat: repeat;
     background-size:auto;
 }
-
 .bckg {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -80,6 +79,62 @@ p {
     filter: brightness(85%);
 
 }
+/* Navbar Component */
+a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    
+}
+a:hover {
+    color:#6743d6;
+    transition: all;
+    transition-duration: 0.2s;
+
+}
+a:active{
+    transform:scale(95%);
+    transition-duration: 0.2s;
+    filter: brightness(85%);
+}
+.Navbar{
+   
+    top: 0; height: 10vh; width: 100%;
+    position: fixed;
+    padding-right: 10vh;
+    z-index: 1000000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap-reverse;
+    /* background-color: rgb(255, 154, 154); */
+    background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(0, 0, 0));
+    
+}
+.Navbar nav ul li {
+    list-style: none;
+    padding: 5px;
+
+}
+.Navbar nav div ul {
+    display: flex; 
+    margin: 0;
+  /* padding: 0;
+  overflow: hidden;
+  background-color: #6743d6; */
+    
+}
+.Navbar nav {
+    list-style-type: none;
+
+}
+/* .Navbar nav div {
+    top: 0; height: 100vh; width: 100%;
+
+        background-color: #6743d6;
+
+} */
 .iframe-round {
     top: 0;
     left: 0;
