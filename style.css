@@ -90,7 +90,7 @@ p {
     .brand {
     top: 0; height: 9vh; width: 100%;
     position: fixed;
-    padding-left: 5vh;
+    padding-left: 3vh;
     z-index: 1000000001;
     display: inline-flex; 
     flex-direction: column;
