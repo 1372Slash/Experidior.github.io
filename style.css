@@ -90,7 +90,7 @@ p {
     .brand {
     top: 0; height: 9vh; width: 100%;
     position: fixed;
-    padding-left: 5vh;
+    padding-left: 6vh;
     z-index: 1000000001;
     display: inline-flex; 
     flex-direction: column;
@@ -169,7 +169,7 @@ p {
     .Navbar nav div ul {
     display: flex; 
     margin: 0;
-    padding-right: 2vh;
+    padding-right: 5vh;
     /* padding: 0;
     overflow: hidden;
     background-color: #6743d6; */
